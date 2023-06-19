@@ -1,0 +1,141 @@
+ /* CSS styles for the dashboard */
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+
+    background-color:rgba(102, 189, 251, 0.937);
+    color: #fff;
+    padding: 20px;
+    padding-left: 450px;
+    height: 40px;
+    
+  }
+  
+  .footer {
+    background-color:rgb(102, 189, 251,0.937);
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+    padding-left:500px ;
+  }
+  
+  .navigation {
+    background-color: #62add8;
+    width: 200px;
+    padding: 20px;
+    height: 500px;
+    color: white;
+    float: left;
+  }
+
+
+  /* body css */
+  .content {
+    margin-left: 220px;
+    padding: 20px;
+    background-color: rgb(227, 227, 238);
+    height: 500px;
+  }
+
+  .navigation ul li{
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  
+  /* table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 40px;
+    background-color: white;
+  }
+  th, td {
+    border: 1px solid rgb(40, 238, 212);
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  tr{
+      
+  /* } */
+
+
+.add{
+  width: 50%;
+    border-collapse: collapse;
+    margin-left: 300px;
+    border: 1px solid rgb(0, 238, 255);
+    margin-top: 150px;
+    border-color: rgb(0, 238, 255);
+    box-shadow: 0 0 10px rgba(93, 232, 245, 0.952);
+
+
+}
+  /* Admin tables */
+  table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-left: 100px;
+    border: 1px solid rgb(0, 238, 255);
+    margin-top: 50px;
+    border-color: rgb(0, 238, 255);
+    box-shadow: 0 0 10px rgba(93, 232, 245, 0.952);
+
+}
+
+th,td{
+  border: 1px solid rgb(68, 182, 190);
+  border-collapse: collapse;
+
+    padding: 8px;
+    text-align: left;
+  
+  }
+  .container {
+    display: flex;
+  }
+  /* opinion form css */
+
+  .containerf {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(93, 232, 245, 0.952);
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 440px;
+    
+
+  }
+
+  
+
+ 
+   
+  @media (max-width: 480px) {
+    /* Styles for screens smaller than 480px */
+    body {
+      background-color: #ffffff;
+    }
+    
+    .container {
+      max-width: 100%;
+      padding: 5px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    table {
+      font-size: 12px;
+    }
+  }
