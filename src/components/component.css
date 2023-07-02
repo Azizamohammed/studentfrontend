@@ -30,7 +30,7 @@
     background-color: #62add8;
     width: 200px;
     padding: 20px;
-    height: 500px;
+    height: 400px;
     color: white;
     float: left;
   }
@@ -41,13 +41,20 @@
     margin-left: 220px;
     padding: 20px;
     background-color: rgb(227, 227, 238);
-    height: 500px;
+    height: 400px;
   }
 
   .navigation ul li{
     list-style: none;
     margin-bottom: 20px;
   }
+  .contentM {
+    margin-left: 220px;
+    padding: 20px;
+    background-color: rgb(227, 227, 238);
+    height: 400px;
+  }
+
 
   
   /* table {
@@ -118,6 +125,22 @@ th,td{
 
   }
 
+
+  .containerss {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(93, 232, 245, 0.952);
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 300px;
+    
+
+  }
+
+
+
   
 
  
@@ -137,5 +160,103 @@ th,td{
   @media screen and (max-width: 600px) {
     table {
       font-size: 12px;
+    }
+  }
+
+
+  .containerA{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(93, 232, 245, 0.952);
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 270px;
+    
+
+  }
+
+  /* AddSurvey */
+  .container{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(93, 232, 245, 0.952);
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 200px;
+    
+
+  }
+/* update */
+  .containerU{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(93, 232, 245, 0.952);
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 200px;
+    
+
+  }
+/* update form */
+.containerUp{
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(93, 232, 245, 0.952);
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 310px;
+
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+  
+
+
+
+  .left {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .right {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .input-group {
+    margin-bottom: 10px;
+  }
+  
+  .input-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .left, .right {
+      flex: 100%;
     }
   }

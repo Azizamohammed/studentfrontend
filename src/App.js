@@ -15,6 +15,10 @@ import Profile from './components/Student/Profile';
 import StuForm from './components/Student/StuForm';
 import StuSecurity from './components/Student/StuSecurity';
 import { BrowserRouter as Router,Route,Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import Update from './components/Admin/Update';
+import UpdateSudent from './components/Admin/UpdateStudent';
+import ViewFeedback from './components/Admin/ViewFeedback';
+import Example from './components/Student/Example';
 
 
 function App() {
@@ -27,7 +31,7 @@ function App() {
         <Route  path='/ManageStudent' component={ManageStudent}></Route>
         <Route  path='/ViewSurvey' component={ViewSurvey}></Route>
         <Route  path='/SecurityChange' component={SecurityChange}></Route>
-
+        <Route path='/ViewFeedback' component={ViewFeedback}/>
 
         <Route path='/StuDashboard' component={Dashboard}></Route>
         <Route  path='/Profile' component={Profile}></Route>
@@ -35,6 +39,9 @@ function App() {
         <Route  path='/StuForms' component={StuForm}></Route>
 
         <Route  path='/reg' component={Registration}></Route>
+        <Route path='/update/:feedbackId' component={Update}></Route>
+        <Route path='/updatestudent/:regnumber' component={UpdateSudent}></Route>
+        <Route path='/Example' component={Example}></Route>
       
 
        

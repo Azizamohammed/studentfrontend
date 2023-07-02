@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../Header";
 import Navigation from "../Navigation";
 import axios from "axios";
+import "../../../node_modules/font-awesome/css/font-awesome.min.css";
 
 
 function ManageStudent(){
@@ -26,8 +27,30 @@ function ManageStudent(){
     }
 
   };
+
+
+
+
+  const handlerDelete = (id) =>{
+    if(window.confirm('Are you sure want to delete?')){
+      axios.delete(`http://localhost:8080/Student/delete${id}`)
+      .then(() =>{
+        setData(data.filter(item  => item.regnumber !== id));
+        alert ("deleted success");
+
+        //toast.success("deleted success"){
+          //   className:"toast-error",
+    //   position:toast.POSITION.TOP_RIGHT,
+    //   autoClose:5000,}
+
+
+    //});
+      })
+       .catch(error => console.error(error));
+    }
+  }
     return(
-        <><Header></Header><Navigation></Navigation><div class="content">
+        <><Header></Header><Navigation></Navigation><div class="contentM">
           <h2>Manage Student</h2>
             
 
@@ -38,9 +61,10 @@ function ManageStudent(){
       <th>Full name</th>
       <th>Program</th>
       <th>Email</th>
-      
       <th>Cumpas</th>
       <th>Gender</th>
+      <th>Update</th>
+      <th>Delete</th>
     </tr>
     </thead>
     <tbody>
@@ -53,10 +77,15 @@ function ManageStudent(){
 <td>{item.email}</td>
 <td>{item.campus}</td>
 <td>{item.gender}</td>
+<td>
+<a href={`/updatestudent/${item.regnumber}`}><button style={{"background-color" : "blue","width": "40px"}}><i class="fa fa-pencil"></i></button></a>
+</td>
+<td><button onClick={() => handlerDelete(item.regnumber)} style={{"background-color" : "red","width": "40px"}} ><i class="fa fa-trash"></i></button>
+</td>
 
 
 </tr>
-    ) )};
+    ) )}
     </tbody>
     
   </table>
@@ -65,5 +94,6 @@ function ManageStudent(){
 
     );
 }
+
 
 export default ManageStudent;

@@ -1,50 +1,154 @@
-import React from "react";
+// import React, { useEffect, useState } from "react";
+// import Footer from "../Footer";
+// import Header from "../Header";
+// import StuNavigation from "../StuNavigation";
+// import axios from "axios";
+// function StuForm(){  
+//   const[questions, setQuestions]= useState([]);
+
+//   useEffect(() =>{
+//     fetchQuestions();
+//   },[]);
+
+//   const fetchQuestions =async() =>{
+//     try{
+//       const response = await axios.get("http://localhost:8080/Feedback/all");
+//       setQuestions(response.data);
+//     }catch(error){
+//       console.error('error',error);
+//     }
+//   };
+
+// const handleSubmit =async(e) =>{
+//   e.preventDefault();
+
+//   try{
+//     const answers = [];
+
+//     for(let question of questions){
+//       const answer = {
+//         feedbackId: question.id,
+//         rateStatus: e.target[question.id].value,
+//       };
+//       answers.push(answer);
+//     }
+//     await axios.post("http://localhost:808/Rates/add",answers);
+//     alert("insert susccefull");
+//   }catch(error){
+//     console.error("error",error);
+  
+//   }
+
+// };
+
+//   return(
+//         <><><Header></Header><StuNavigation></StuNavigation></><><div class="containerf">
+
+// <form onSubmit={handleSubmit}>
+//       {questions.map((question) => (
+//         <div key={question.id}>
+//           <label htmlFor={question.id}>{question.question}</label>
+//           <div>
+//             <input type="radio" id={question.id} name={question.id} value="yes" />
+//             <label htmlFor={question.id}>Yes</label>
+//           </div>
+//           <div>
+//             <input type="radio" id={question.id} name={question.id} value="no" />
+//             <label htmlFor={question.id}>No</label>
+//           </div>
+//         </div>
+//       ))}
+//       <button type="submit">Submit</button>
+//     </form>
+
+        
+//       </div><Footer></Footer></></>
+//     );
+// }
+// export default StuForm;
+
+
+
+import React, { useEffect, useState } from "react";
 import Footer from "../Footer";
 import Header from "../Header";
 import StuNavigation from "../StuNavigation";
-function StuForm(){   
-    return(
-      <><><Header></Header><StuNavigation></StuNavigation></><><div class="containerf">
+import axios from "axios";
 
-        <h2>Student opinion form</h2>
-        <label for="about">Is leacture teach student for parmanent time </label>
-        <br />
-        <input type="radio" id="q1_option1" name="question1" value="Very satisfied" required />
-        <label for="q1_option1">good</label><br />
-        <input type="radio" id="q1_option2" name="question1" value="Satisfied" />
-        <label for="q1_option2">very good</label><br/>
-        <input type="radio" id="q1_option1" name="question1" value="Very satisfied" required />
-        <label for="q1_option1">excellent</label><br />
-        <input type="radio" id="q1_option2" name="question1" value="Satisfied" />
-        <label for="q1_option2">bad</label>
-        <br />
-        <label for="about">I learn best by </label>
-        <br />
-        <input type="radio" id="q1_option1" name="question1" value="Very satisfied" required />
-        <label for="q1_option1">good</label><br />
-        <input type="radio" id="q1_option2" name="question1" value="Satisfied" />
-        <label for="q1_option2">very good</label><br></br>
-        <input type="radio" id="q1_option1" name="question1" value="Very satisfied" required />
-        <label for="q1_option1">excellent</label><br />
-        <input type="radio" id="q1_option2" name="question1" value="Satisfied" />
-        <label for="q1_option2">bad</label>
-        <br />
-        <label for="about">I am experience some difficult in the class as the followings </label>
-        <br />
-        <input type="radio" id="q1_option1" name="question1" value="Very satisfied" required />
-        <label for="q1_option1">good</label><br />
-        <input type="radio" id="q1_option2" name="question1" value="Satisfied" />
-        <label for="q1_option2">very good</label><br></br>
-        <input type="radio" id="q1_option1" name="question1" value="Very satisfied" required />
-        <label for="q1_option1">excellent</label><br />
-        <input type="radio" id="q1_option2" name="question1" value="Satisfied" />
-        <label for="q1_option2">bad</label><br></br>
-        <label for="feedback">Feedback:</label>
-        <textarea id="feedback" name="feedback" placeholder="Enter your feedback" required></textarea>
-        <br />
-        <br/>
-        <button type="submit"> Submit</button>
-      </div><Footer></Footer></></>
-    );
+function StuForm() {
+  const [questions, setQuestions] = useState([]);
+
+  useEffect(() => {
+    fetchQuestions();
+  }, []);
+
+  const fetchQuestions = async () => {
+    try {
+      const response = await axios.get("http://localhost:8080/Feedback/all");
+      setQuestions(response.data);
+    } catch (error) {
+      console.error('error', error);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    try {
+      const answers = [];
+
+      const userId = 1;
+  
+      for (let question of questions) {
+        const answer = {
+          feedbackId: userId, // Assuming userId is the ID of the current user
+          rateStatus: e.target.elements[question.id].value,
+        };
+        answers.push(answer);
+      }
+  
+      await axios.post("http://localhost:808/Rates/add", answers);
+      alert("Insert successful");
+    } catch (error) {
+      console.error("error", error);
+    }
+  };
+  
+  return (
+    <>
+      <Header />
+      <StuNavigation />
+      <div className="containerf">
+        <form onSubmit={handleSubmit}>
+          {questions.map((question) => (
+            <div key={question.id}>
+              <label htmlr={question.id}>{question.question}</label>
+              <div>
+                <input
+                  type="radio"
+                  id={question.id}
+                  name={question.id}
+                  value={question.value}
+                />
+                <label htmlFor={question.id}>Yes</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id={question.id}
+                  name={question.id}
+                  value={question.value}
+                />
+                <label htmlFor={question.id}>No</label>
+              </div>
+            </div>
+          ))}
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <Footer />
+    </>
+  );
 }
+
 export default StuForm;

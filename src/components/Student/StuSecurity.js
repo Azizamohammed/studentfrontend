@@ -5,9 +5,9 @@ import StuNavigation from "../StuNavigation";
 
 function StuSecurity(){
     return(
-        <><Header></Header><StuNavigation></StuNavigation><div class="container">
+        <><Header></Header><StuNavigation></StuNavigation><div class="containerss">
             <form>
-                <h2>Login</h2>
+                
                 <div class="input-group">
                     <label for="username">Username</label>
                     <input type="text" id="username" required></input>

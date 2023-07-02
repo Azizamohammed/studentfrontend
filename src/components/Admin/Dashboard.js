@@ -3,7 +3,9 @@ import Footer from "../Footer";
 import Header from "../Header";
 import Navigation from "../Navigation";
 
+
 function Dashboard(){
+
     return(
         <><Header></Header><Navigation></Navigation><div class="content">
             <h2>Dashboard Content</h2>

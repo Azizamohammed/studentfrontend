@@ -5,9 +5,9 @@ import React from "react";
 
 function SecurityChange(){
     return(
-        <><Header></Header><Navigation></Navigation><div class="container">
+        <><Header></Header><Navigation></Navigation><div class="containerss">
             <form>
-                <h2>Security Change</h2>
+            <p>Security Change</p>
                 <div class="input-group">
                     <label for="username">Username</label>
                     <input type="text" id="username" required></input>
