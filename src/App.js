@@ -18,7 +18,8 @@ import { BrowserRouter as Router,Route,Switch } from 'react-router-dom/cjs/react
 import Update from './components/Admin/Update';
 import UpdateSudent from './components/Admin/UpdateStudent';
 import ViewFeedback from './components/Admin/ViewFeedback';
-import Example from './components/Student/Example';
+import Feedback from './components/Student/Feedback';
+
 
 
 function App() {
@@ -37,11 +38,12 @@ function App() {
         <Route  path='/Profile' component={Profile}></Route>
         <Route  path='/StuSecurity' component={StuSecurity}></Route>
         <Route  path='/StuForms' component={StuForm}></Route>
+        <Route path='/Feedback' component={Feedback}></Route>
 
         <Route  path='/reg' component={Registration}></Route>
         <Route path='/update/:feedbackId' component={Update}></Route>
         <Route path='/updatestudent/:regnumber' component={UpdateSudent}></Route>
-        <Route path='/Example' component={Example}></Route>
+        
       
 
        

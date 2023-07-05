@@ -9,7 +9,8 @@ function StuNavigation(){
             <ul>
                 
                 <li><a href="/Profile"><i className='fa fa-user'>   Profile</i></a></li>
-                <li><a href="/StuForms"><i className='fa fa-folder'></i>Feedback</a></li>
+                <li><a href="/StuForms"><i className='fa fa-folder'></i>FeedbackForm</a></li>
+                <li><a href="/Feedback"><i className='fa fa-folder'></i>Feedback</a></li>
                <li><a href="/SecurityChange"><i className='fa fa-gears'>  SecurityChange</i></a></li>
                 <li> <a href='/'><i className='fa fa-sign-out'></i>  Logout</a> </li>
             </ul>

@@ -96,17 +96,7 @@ const Login = () => {
     }
     
   
-    axios.post('http://localhost:8080/User/add',data)
-    .then(response => {
-      console.log(response.data); 
-      
-      alert("inserted success");
-      })
-      .catch((error) =>{
-        console.log(error);
-      }); 
-
-
+    
 
     }
 

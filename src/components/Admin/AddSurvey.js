@@ -9,9 +9,9 @@ import axios from "axios";
 
 function AddSurvey(){
 const[formData, setFormData] =useState({
-  question1: "",
-  question2: "",
-  question3:"",
+  question: "",
+  //question2: "",
+  //question3:"",
 
 });
 
@@ -59,17 +59,8 @@ const handleSubmit = (event) =>{
 <div className="left">
   <div class="input-group">
     {/* <label for="input1" class="input-label">question 1:</label> */}
-    <input type="text" id="input1" name="question1" value={formData.question1} placeholder="question1" onChange={handleChange} class="input-field"/>
+    <input type="text" id="input1" name="question" value={formData.question} placeholder="question1" onChange={handleChange} class="input-field"/>
   </div>
-  
-  <div className="input-group">
-    {/* <label for="input2" class="input-label">question 2:</label> */}
-    <input type="text" id="input2" name="question2" value={formData.question2} placeholder="question 2" onChange={handleChange} class="input-field"/>
-  </div>
-</div>
-  <div class="input-group">
-    {/* <label for="input3" class="input-label">question 3:</label> */}
-    <input type="text" id="input3" name="question3" value={formData.question3} placeholder="question3" onChange={handleChange} class="input-field"/>
   </div>
     <button type="submit">submit</button>
     

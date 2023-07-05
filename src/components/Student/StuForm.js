@@ -141,7 +141,10 @@ function StuForm() {
                 />
                 <label htmlFor={question.id}>No</label>
               </div>
-            </div>
+          </div>
+          
+
+            
           ))}
           <button type="submit">Submit</button>
         </form>
